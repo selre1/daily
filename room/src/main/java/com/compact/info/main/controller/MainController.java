@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class MainController {
 
-	//주석 수정
+	//주석 수정입니다
 	@GetMapping("main")
 	public String main() {
 		return "index";
