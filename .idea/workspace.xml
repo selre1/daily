@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0aca0dd-d11c-4e63-a828-f8b059e6a0a8" name="Changes" comment="[MOD] 폴더구조 변경">
+    <list default="true" id="c0aca0dd-d11c-4e63-a828-f8b059e6a0a8" name="Changes" comment="[MOD] TEST">
       <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/main/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/main/controller/MainController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678672870198</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[MOD] TEST">
+      <created>1678674170913</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678674170913</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -260,6 +267,7 @@
     <MESSAGE value="[MOD] test" />
     <MESSAGE value="[MOD] 테스트!" />
     <MESSAGE value="[MOD] 폴더구조 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOD] 폴더구조 변경" />
+    <MESSAGE value="[MOD] TEST" />
+    <option name="LAST_COMMIT_MESSAGE" value="[MOD] TEST" />
   </component>
 </project>
