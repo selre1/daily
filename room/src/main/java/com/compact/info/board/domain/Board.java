@@ -16,9 +16,11 @@ import com.compact.info.common.CommonDate;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Board extends CommonDate{
@@ -38,4 +40,10 @@ public class Board extends CommonDate{
 	
 	@OneToMany(mappedBy = "board")
 	private List<BoardFile> boardFile = new ArrayList<>();
+
+	public class board {
+		private String title;
+		private String content;
+		private String creatorId;
+	}
 }
