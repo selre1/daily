@@ -1,22 +1,15 @@
 package com.compact.info.board.domain;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 
 import com.compact.info.boardfile.domain.BoardFile;
 import com.compact.info.common.CommonDate;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
@@ -41,9 +34,17 @@ public class Board extends CommonDate{
 	@OneToMany(mappedBy = "board")
 	private List<BoardFile> boardFile = new ArrayList<>();
 
+
+//	@Entity
+//	@Table(name="BOARD")
+//	@NoArgsConstructor
+//	@Data
 	public class board {
-		private String title;
-		private String content;
-		private String creatorId;
+		@Id
+		@GeneratedValue(strategy = GenerationType.IDENTITY)
+		private Long BOARD_IDX;
+		private int HIT;
+		private String TITLE;
+		private String CONTENT;
 	}
 }

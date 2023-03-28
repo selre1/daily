@@ -23,5 +23,6 @@ public class BoardService {
 	@Transactional(readOnly = true)
 	public List<Board> getBoardList(){
 		return boardRepository.findAll();
+
 	}
 }
