@@ -13,7 +13,6 @@ import lombok.*;
 
 @Entity
 @Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Board extends CommonDate{
@@ -30,21 +29,16 @@ public class Board extends CommonDate{
 	private int hit;
 	
 	private String creatorId;
-	
+
+	@Builder
+	public Board(Long boardIdx, String title, String content, int hit, String creatorId) {
+		this.boardIdx = boardIdx;
+		this.title = title;
+		this.content = content;
+		this.hit = hit;
+		this.creatorId = creatorId;
+	}
+
 	@OneToMany(mappedBy = "board")
 	private List<BoardFile> boardFile = new ArrayList<>();
-
-
-//	@Entity
-//	@Table(name="BOARD")
-//	@NoArgsConstructor
-//	@Data
-	public class board {
-		@Id
-		@GeneratedValue(strategy = GenerationType.IDENTITY)
-		private Long BOARD_IDX;
-		private int HIT;
-		private String TITLE;
-		private String CONTENT;
-	}
 }
