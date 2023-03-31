@@ -1,115 +1,208 @@
+
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" 
-	  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/default}">
-	<div layout:fragment="content">
-		<section>
-	    	<div id="mainBanner"> <!-- 메인배너 ↓ -->
-	            <div class="swiper mySwiper">  
-	                <div class="swiper-wrapper">
-	                    <div class="swiper-slide"> <!-- 메인배너1 ↓ -->
-	                        <div class="mainBannerImg"><img th:src=@{main/img/history_img.jpg}></div>
-	                    </div>
-	                    <div class="swiper-slide"> <!-- 메인배너2 ↓ -->
-	                        <div class="mainBannerImg"><img th:src=@{main/img/history_img.jpg}></div>
-	                    </div>
-	                    <div class="swiper-slide"> <!-- 메인배너3 ↓ -->
-	                        <div class="mainBannerImg"><img th:src=@{main/img/history_img.jpg}></div>
-	                    </div>
-	                </div>
-	            </div>
-	            <a href="#" onclick="return false" id="mainBtL"><img th:src=@{main/img/mainBt.svg}></a>
-	            <a href="#" onclick="return false" id="mainBtR"><img th:src=@{main/img/mainBt.svg}></a>
-	            <a href="order?order=home" id="mainOrder"><img th:src="@{main/img/mainConn.svg}"><span>접속하기</span></a>
-	        </div>
-	        <div id="mainMenu">
-		        <div id="mainMenuTitleDeco"><p>History</p></div>
-	        	<div class="swiper mySwiper2">  
-	                <div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-			        		<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-			        		<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-			        		<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-		        		</div>
-		        		<div class="swiper-slide">
-							<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-			        		<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-			        		<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-			        		<div class="mainMenus"><img th:src=@{main/img/ul.jpg}><p class="mainMenusName">울릉도</p><p class="mainMenusInfo">2022년 8월 16일 오전 10:30<br> 울릉도에서 여름휴가</p></div>
-		        		</div>
-	                </div>
-	            </div>
-	            <a href="#" onclick="return false" id="mainMenuBtL"><img th:src=@{main/img/mainMenuBt.svg}></a>
-	            <a href="#" onclick="return false" id="mainMenuBtR"><img th:src=@{main/img/mainMenuBt.svg}></a>
-	        </div>
-	        <div id="mainEtc">
-	        	<div id="mainEtcNotice">
-	        		<div>
-	        			<div id="mainEtcNoticeTitleDeco"><p>What's New</p></div>
-	        			<p>FT 매거진<br> 소식통</p>
-	        		</div>
-	        		<div>
-	        			<a href="/sandme-0.0.1-SNAPSHOT/noticeView?noticeNum=9&amp;section=1&amp;page=1">
-	        				<span>작성 테스트</span>
-	        				
-	       				</a><br>
-	        			<a href="/sandme-0.0.1-SNAPSHOT/noticeView?noticeNum=6&amp;section=1&amp;page=1">
-	        				<span>작성 테스트</span>
-	        				
-	       				</a><br>
-	        			<a href="/sandme-0.0.1-SNAPSHOT/noticeView?noticeNum=5&amp;section=1&amp;page=1">
-	        				<span>작성 테스트</span>
-	        				
-	       				</a><br>
-	        			<a href="/sandme-0.0.1-SNAPSHOT/noticeView?noticeNum=4&amp;section=1&amp;page=1">
-	        				<span>작성 테스트</span>
-	        				
-	       				</a><br>
-	        			<a href="/sandme-0.0.1-SNAPSHOT/noticeList" style="color: #C9CACA;"><span>more</span></a>
-	        		</div>
-	        	</div>
-				<div id="mainEtcShop">
-					<p>FT 찾기</p>
-					<p>What's going on</p>
-					<a href="/s andme-0.0.1-SNAPSHOT/map?map=address"><span>more</span></a>
-					<img th:src=@{main/img/location.svg}>
-				</div>
-	        </div>
-	    </section>
-	    <script>
-		    let bt_pv = $("#mainBtL"); /* 메인 배너 스크립트 ↓ */
-		    let bt_nt = $("#mainBtR");
-		    let swiper = new Swiper(".mySwiper", {navigation: {nextEl: "#mainBtR", prevEl: "#mainBtL"},
-		        on: {activeIndexChange: function() {
-		            if (this.realIndex == 0) {
-		                bt_pv.css("opacity","0.25");
-		            } else if (this.realIndex == 1) {
-		                bt_pv.css("opacity","1");
-		                bt_nt.css("opacity","1");
-		            } else {
-		                bt_nt.css("opacity","0.25");
-		            }
-		        }}
-		    });
-		    
-		    let bt_pv2 = $("#mainMenuBtL"); /* 메인 메뉴 스크립트 ↓ */
-		    let bt_nt2 = $("#mainMenuBtR");
-		    let swiper2 = new Swiper(".mySwiper2", {navigation: {nextEl: "#mainMenuBtR", prevEl: "#mainMenuBtL"},
-		        on: {activeIndexChange: function() {
-		            if (this.realIndex == 0) {
-		                bt_pv2.css("opacity","0.25");
-		                bt_nt2.css("opacity","1");
-		            } else {
-						bt_pv2.css("opacity","1");
-		                bt_nt2.css("opacity","0.25");
-		            }
-		        }}
-		    });
-		    
-		    function SNS() {
-		    	alert("준비중 입니다.");
-		    }
-	    </script>
-	</div>	
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<title>Daily</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" th:src="@{main/js/menu.js}"></script>
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+    .w3-third img:hover{opacity: 1}
+    img {max-width:100%; height: auto;}
+    a {text-decoration:none}
+</style>
+
+<body class="w3-ivory w3-content" style="max-width:1600px">
+
+    <!--메뉴 -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
+
+        <a href=""/><img th:src="@{main/images/hacker.jpeg}"  style="width:70%;" class="w3-circle w3-margin"/><br><br>
+
+            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-white w3-xlarge w3-display-topright w3-padding w3-hide-large">×</a>
+
+            <h>DAILY WEBSITE</h>
+            <br>
+            <br>
+
+            <a href="#profile" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a>
+            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+
+            <br>
+            <div class = "navbar">
+                <a href="">로그인</a>
+                |
+                <a href="">회원 가입</a>
+            </div>
+            <br>
+            <div id="menu bar">
+                <a href="">쪽지 보내기</a>
+                <br><br>
+                <a href="">게시판 작성</a>
+                <br><br>
+                <a href="">CodeIgniter 게시판</a>
+            </div>
+
+    </nav>
+
+    <!-- 창 최소화시 메인 로고와 메뉴 -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- 작은 화면에서 메뉴를 열 때 오버레이 효과  -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !페이지 구성! -->
+    <div class="w3-main" style="margin-left:300px">
+        <!-- 작은 화면에서 스크롤로 내림 -->
+        <div class="w3-hide-large" style="margin-top:150px"></div>
+        <!-- 메인 사진 -->
+        <div class="w3-row" id="ALL PHOTO">
+            <div class="w3-first">
+                <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" width = 100%, max-width = 1500px, height = "auto", volume="0"/>
+                    <source th:src="@{main/images/main_video.mp4}" type="video/mp4"/>
+            </div>
+
+            <!-- 메인 사진 선택시 전체 크기 이미지 속성-->
+            <div id="modal01" class="w3-modal w3-light-grey" style="padding-top:0" onclick="this.style.display='none'">
+                <span class="w3-button w3-white w3-xlarge w3-display-topright">×</span> <!-- ×표시 색깔-->
+                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+                    <img id="img01" class="w3-image">
+                    <p id="caption"></p>
+                </div>
+            </div>
+
+            <div class="w3-container w3-padding-large", id="profile">
+                <h3><b><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</b></h3>
+                <br>
+
+                <h4>Daily<br><br>
+                    crew<br><br>
+                    I WILL DO MY BEST
+                </h4>
+                <hr>
+
+                <h3><b>TECHNICAL SKILLS</b></h3>
+                <!-- Progress bars / Skills -->
+                <p>Photography</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
+                </div>
+
+                <p>Web Design</p>
+                <div class="w3-grey">
+                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
+                </div>
+
+                <p>
+                    <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
+                        <i class="fa fa-download w3-margin-right"></i>Download Resume
+                    </button>
+                </p>
+                <hr>
+            </div>
+
+            <div class="w3-container w3-padding-large", id="portfolio">
+                <h3><b><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</b></h3>
+                <br>
+
+                <div class="w3-container w3-topbar w3-padding-16",id="portfolio">
+                    <button class="w3-button w3-gray">ALL</button>
+                    <button class="w3-button w3-white"><i class="fa fa-database w3-margin-right"></i>Web Programming</button>
+                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-cloud w3-margin-right"></i>Network</button>
+                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-cogs w3-margin-right"></i>Linux</button>
+                </div>
+                <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
+
+                <!-- First Photo Grid-->
+                <div class="w3-container">
+                    <div class="w3-row-padding">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>HACKER</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                            </div>
+                        </div>
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>DIGITAL</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                            </div>
+                        </div>
+                        <div class="w3-third w3-container">
+                            <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>PROGRAMMING</b></p>
+                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Photo Grid-->
+                <div class="w3-row-padding">
+                    <div class="w3-third w3-container w3-margin-bottom">
+                        <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>ANALYTICS</b></p>
+                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-container w3-margin-bottom">
+                        <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>AI</b></p>
+                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                        </div>
+                    </div>
+                    <div class="w3-third w3-container w3-margin-bottom">
+                        <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                        <div class="w3-container w3-white">
+                            <p><b>BLOCKCHAIN</b></p>
+                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 페이지 넘김 -->
+                <div class="w3-center w3-padding-32">
+                    <div class="w3-bar">
+                        <a href="#protfolio" class="w3-bar-item w3-button">«</a>
+                        <a href="#protfolio" class="w3-bar-item w3-button">1</a>
+                        <a href="#protfolio" class="w3-bar-item w3-button">»</a>
+                    </div>
+                </div>
+
+                <!-- 바닥글 -->
+                <footer class="w3-container w3-padding-32 w3-light-gray">
+                    <div class="w3-row-padding", id="contact">
+                        <div class="w3-third">
+                            <h3><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</h3>
+                            <p>GITHUB : ROOM</p>
+                            <p>Instagram : <a href="https://www.instagram.com/?hl=ko" target="_blank" style="text-decoration:none">https://www.instagram.com/?hl=ko</a></p>
+                            <p>DAily</p>
+                        </div>
+                    </div>
+                </footer>
+                <!-- 페이지 구성 끝 -->
+            </div>
+        </div>
+    </div>
+</body>
 </html>
+
+
+
+
+
+
