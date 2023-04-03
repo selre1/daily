@@ -4,11 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c0aca0dd-d11c-4e63-a828-f8b059e6a0a8" name="Changes" comment="[MOD] TEST">
-      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/main/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/main/controller/MainController.java" afterDir="false" />
-    <list default="true" id="4da77f85-44cc-414d-bf2b-3d1772f32d41" name="Changes" comment="[MOD] 주석제거">
+    <list default="true" id="1c116755-21ea-418b-8110-c2c60b3ce92c" name="Changes" comment="[ADD] boardDto 생성">
+      <change afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/dto/BoardDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/controller/BoardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/domain/BoardResponseDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/domain/SaveBoardRequestDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/service/BoardService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/src/main/resources/templates/board/board-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/resources/templates/board/board-view.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/src/main/resources/templates/board/insertBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/resources/templates/board/board-write.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/room/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/room/src/test/gitTest.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,7 +42,19 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="room" type="f1a62948:ProjectNode" />
-                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="room" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="room" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -45,67 +63,109 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="room.hb" />
-        <entry key="$PROJECT_DIR$/../git-kaia-web" value="master" />
+        <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
-    <option name="UPDATE_TYPE" value="REBASE" />
+    <option name="ROOT_SYNC" value="SYNC" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a9f35114-a8c4-4088-a29c-56c42ef2e0bd" />
+        <option name="url" value="https://github.com/selre1/daily.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
-  <component name="ProjectId" id="2MM9z2Pq793E2fLha4t3siUiewQ" />
+  <component name="ProjectId" id="2MSVtMRaCdKWxWJLDBsHqhMDkq0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/GIT/IdeaProjects/geoleveling&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;c61d44646632fb35a4d8106462e3a8c8&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Project/daily/room/src/main/resources/templates/board",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "spring.configuration.checksum": "eef130fb2fc742cb0c7cd38b058aa218",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Project\daily\room\src\main\resources\templates\board" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\GIT\IdeaProjects\daily\room\src\main\resources\static\main\imges" />
-      <recent name="C:\Users\GIT\IdeaProjects\daily\room\src\main\resources\static\main\img" />
-      <recent name="C:\Users\GIT\IdeaProjects\daily\room\src\main\resources\static\main\" />
-      <recent name="C:\Users\GIT\IdeaProjects\daily\room\src\main\resources\static\main\img\img" />
-      <recent name="C:\Users\GIT\IdeaProjects\daily\room\src\main\resources\static" />
+      <recent name="C:\Project\daily\room\src\main\resources\templates" />
+      <recent name="C:\Project\daily\room\src\main\resources\templates\board" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.compact.info.board.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.GitKaiaWebApplication">
+  <component name="RunManager" selected="Gradle.room [bootRun]">
+    <configuration name="room [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/room" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="room [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -127,109 +187,90 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="GitKaiaWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="git-kaia-web" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.kaia.git.gitkaiaweb.GitKaiaWebApplication" />
+    <configuration name="RoomApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="com.compact.room.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.compact.info.RoomApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="RoomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="room.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.compact.info.RoomApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.compact.info.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.RoomApplication" />
+        <item itemvalue="Gradle.room [bootRun]" />
         <item itemvalue="Gradle.room [build]" />
-        <item itemvalue="Spring Boot.RoomApplication" />
         <item itemvalue="Gradle.room [build]" />
-        <item itemvalue="Spring Boot.RoomApplication" />
+        <item itemvalue="Gradle.room [bootRun]" />
+        <item itemvalue="Gradle.room [build]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c0aca0dd-d11c-4e63-a828-f8b059e6a0a8" name="Changes" comment="" />
-      <created>1677566842333</created>
+      <changelist id="1c116755-21ea-418b-8110-c2c60b3ce92c" name="Changes" comment="" />
+      <created>1677761191876</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1677566842333</updated>
-      <workItem from="1677566844221" duration="3561000" />
-      <workItem from="1677716216857" duration="82000" />
-      <workItem from="1677723125501" duration="13000" />
-      <workItem from="1677723664938" duration="766000" />
-      <workItem from="1677738860280" duration="570000" />
-      <workItem from="1677739801182" duration="184000" />
-      <workItem from="1677740713628" duration="649000" />
-      <workItem from="1677743406227" duration="179000" />
-      <workItem from="1678061505316" duration="571000" />
-      <workItem from="1678076376020" duration="635000" />
-      <workItem from="1678088975454" duration="47000" />
-      <workItem from="1678089618401" duration="49000" />
-      <workItem from="1678089687026" duration="791000" />
-      <workItem from="1678145605922" duration="9000" />
-      <workItem from="1678145805493" duration="282000" />
-      <workItem from="1678148335586" duration="6400000" />
-      <workItem from="1678242469639" duration="93000" />
-      <workItem from="1678328958685" duration="1412000" />
-      <workItem from="1678330413539" duration="48000" />
-      <workItem from="1678410148214" duration="3050000" />
-      <workItem from="1678666136453" duration="5783000" />
+      <updated>1677761191876</updated>
+      <workItem from="1677761192935" duration="75000" />
+      <workItem from="1677996467266" duration="3398000" />
+      <workItem from="1678001035027" duration="65000" />
+      <workItem from="1678624459943" duration="2752000" />
+      <workItem from="1678629961044" duration="454000" />
+      <workItem from="1678630441467" duration="168000" />
+      <workItem from="1678699451679" duration="3727000" />
+      <workItem from="1679223285968" duration="6535000" />
+      <workItem from="1679229864257" duration="235000" />
+      <workItem from="1679797037258" duration="7693000" />
+      <workItem from="1679997144215" duration="349000" />
+      <workItem from="1680006240594" duration="2688000" />
+      <workItem from="1680095010886" duration="1744000" />
+      <workItem from="1680424180378" duration="4417000" />
+      <workItem from="1680430732651" duration="10265000" />
     </task>
-    <task id="LOCAL-00001" summary="[MOD] 변경">
-      <created>1677567599833</created>
+    <task id="LOCAL-00001" summary="프로젝트 깃 업데이트">
+      <created>1677997002792</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1677567599833</updated>
+      <updated>1677997002792</updated>
     </task>
-    <task id="LOCAL-00002" summary="[MOD] test">
-      <created>1678154803502</created>
+    <task id="LOCAL-00002" summary="[ADD] 깃 테스트">
+      <created>1678700112340</created>
       <option name="number" value="00002" />
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
-      <updated>1678154803502</updated>
+      <updated>1678700112340</updated>
     </task>
-    <task id="LOCAL-00003" summary="[MOD] 테스트!">
-      <created>1678155542714</created>
+    <task id="LOCAL-00003" summary="[ADD] 게시글 등록 간단히 구현">
+      <created>1679229747419</created>
       <option name="number" value="00003" />
       <option name="presentableId" value="LOCAL-00003" />
       <option name="project" value="LOCAL" />
-      <updated>1678155542714</updated>
+      <updated>1679229747419</updated>
     </task>
-    <task id="LOCAL-00004" summary="[MOD] 폴더구조 변경">
-      <created>1678330194777</created>
+    <task id="LOCAL-00004" summary="[ADD] 게시판 리스트 조회">
+      <created>1679997418012</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1678330194777</updated>
+      <updated>1679997418012</updated>
     </task>
-    <task id="LOCAL-00005" summary="[MOD] 폴더구조 변경">
-      <created>1678672626629</created>
+    <task id="LOCAL-00005" summary="[ADD] boardDto 생성">
+      <created>1680008919846</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1678672626629</updated>
+      <updated>1680008919846</updated>
     </task>
-    <task id="LOCAL-00006" summary="[MOD] 폴더구조 변경">
-      <created>1678672870198</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1678672870198</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -246,7 +287,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="origin/master" />
                       </list>
                     </value>
                   </entry>
@@ -257,12 +298,37 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/jsBranch" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="[MOD] 변경" />
-    <MESSAGE value="[MOD] test" />
-    <MESSAGE value="[MOD] 테스트!" />
-    <MESSAGE value="[MOD] 폴더구조 변경" />
-    <option name="LAST_COMMIT_MESSAGE" value="[MOD] 폴더구조 변경" />
+    <MESSAGE value="프로젝트 깃 업데이트" />
+    <MESSAGE value="[ADD] 깃 테스트" />
+    <MESSAGE value="[ADD] 게시글 등록 간단히 구현" />
+    <MESSAGE value="[ADD] 게시판 리스트 조회" />
+    <MESSAGE value="[ADD] boardDto 생성" />
+    <option name="LAST_COMMIT_MESSAGE" value="[ADD] boardDto 생성" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
