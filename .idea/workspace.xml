@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c116755-21ea-418b-8110-c2c60b3ce92c" name="Changes" comment="[ADD] boardDto 생성">
-      <change afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/dto/BoardDto.java" afterDir="false" />
+    <list default="true" id="8140973f-f86a-4ed0-bfcf-3dc1f78eaa1d" name="Changes" comment="[ADD] boardDto 생성">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/controller/BoardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/controller/BoardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/domain/BoardResponseDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/domain/SaveBoardRequestDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/service/BoardService.java" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/java/com/compact/info/board/service/BoardService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/main/resources/templates/board/board-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/resources/templates/board/board-view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/main/resources/templates/board/insertBoard.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/resources/templates/board/board-write.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/room/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/room/src/test/gitTest.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,19 +34,7 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="room" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="room" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="application" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="room" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
               </path>
             </expand>
             <select />
@@ -66,15 +46,18 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="master" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="room.hb" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,7 +111,7 @@
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "preferences.lookFeel",
-    "spring.configuration.checksum": "eef130fb2fc742cb0c7cd38b058aa218",
+    "spring.configuration.checksum": "c61d44646632fb35a4d8106462e3a8c8",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -144,7 +127,7 @@
       <recent name="com.compact.info.board.domain" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.room [bootRun]">
+  <component name="RunManager" selected="Spring Boot.RoomApplication">
     <configuration name="room [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -194,19 +177,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RoomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+    <configuration name="RoomApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="room.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.compact.info.RoomApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.compact.info.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.RoomApplication" />
+        <item itemvalue="Gradle.room [build]" />
         <item itemvalue="Gradle.room [bootRun]" />
         <item itemvalue="Gradle.room [build]" />
-        <item itemvalue="Gradle.room [build]" />
-        <item itemvalue="Gradle.room [bootRun]" />
         <item itemvalue="Gradle.room [build]" />
       </list>
     </recent_temporary>
@@ -214,7 +203,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1c116755-21ea-418b-8110-c2c60b3ce92c" name="Changes" comment="" />
+      <changelist id="8140973f-f86a-4ed0-bfcf-3dc1f78eaa1d" name="Changes" comment="[ADD] boardDto 생성" />
       <created>1677761191876</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -234,6 +223,7 @@
       <workItem from="1680095010886" duration="1744000" />
       <workItem from="1680424180378" duration="4417000" />
       <workItem from="1680430732651" duration="10265000" />
+      <workItem from="1680572262421" duration="2667000" />
     </task>
     <task id="LOCAL-00001" summary="프로젝트 깃 업데이트">
       <created>1677997002792</created>
@@ -287,7 +277,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/master" />
+                        <option value="room.hb" />
                       </list>
                     </value>
                   </entry>
