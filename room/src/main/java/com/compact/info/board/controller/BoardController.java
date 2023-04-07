@@ -34,4 +34,9 @@ public class BoardController {
 		boardService.write(boardDto);
 		return "redirect:/";
 	}
+
+	@GetMapping("/test")
+	public String tes(){
+		return "board/list";
+	}
 }
