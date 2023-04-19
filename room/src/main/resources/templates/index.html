@@ -1,210 +1,127 @@
-
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<title>Daily</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<script type="text/javascript" th:src="@{main/js/menu.js}"></script>
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-<style>
-    body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-    .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
-    .w3-third img:hover{opacity: 1}
-    img {max-width:100%; height: auto;}
-    a {text-decoration:none}
-</style>
-
-<body class="w3-ivory w3-content" style="max-width:1600px">
-
-    <!--메뉴 -->
-    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold" id="mySidebar"><br>
-
-        <a href=""/><img th:src="@{main/images/hacker.jpeg}"  style="width:70%;" class="w3-circle w3-margin"/><br><br>
-
-            <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-white w3-xlarge w3-display-topright w3-padding w3-hide-large">×</a>
-
-            <h>DAILY WEBSITE</h>
-            <br>
-            <br>
-
-            <a href="#profile" onclick="w3_close()" class="w3-bar-item w3-button w3-padding "><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</a>
-            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
-            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-
-            <br>
-            <div class = "navbar">
-                <a href="">로그인</a>
-                |
-                <a href="">회원 가입</a>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Daily</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic" rel="stylesheet" type="text/css" />
+    <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
+    <link th:href="@{main/css/styles.css}" rel="stylesheet" />
+    <style>
+        .box {
+            overflow-y: scroll;
+        }
+        .box::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+<body id="page-top" class="box">
+<!-- Navigation-->
+<nav th:replace="fragments.html :: main-nav"></nav>
+<!-- Masthead-->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-8 align-self-end">
+                <h1 class="text-white font-weight-bold">데일리 맛집</h1>
+                <hr class="divider" />
             </div>
-            <br>
-            <div id="menu bar">
-                <a href="">쪽지 보내기</a>
-                <br><br>
-                <a href="">CodeIgniter 게시판</a>
-                <br><br>
-                <a href="/board/write">게시판 작성</a>
-                <br><br>
-                <a href="/board/list">게시판 리스트조회</a>
-            </div>
-
-    </nav>
-
-    <!-- 창 최소화시 메인 로고와 메뉴 -->
-    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
-        <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
-    </header>
-
-    <!-- 작은 화면에서 메뉴를 열 때 오버레이 효과  -->
-    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-    <!-- !페이지 구성! -->
-    <div class="w3-main" style="margin-left:300px">
-        <!-- 작은 화면에서 스크롤로 내림 -->
-        <div class="w3-hide-large" style="margin-top:150px"></div>
-        <!-- 메인 사진 -->
-        <div class="w3-row" id="ALL PHOTO">
-            <div class="w3-first">
-                <video id="videobcg" preload="auto" autoplay="true" loop="loop" muted="muted" width = 100%, max-width = 1500px, height = "auto", volume="0"/>
-                    <source th:src="@{main/images/main_video.mp4}" type="video/mp4"/>
-            </div>
-
-            <!-- 메인 사진 선택시 전체 크기 이미지 속성-->
-            <div id="modal01" class="w3-modal w3-light-grey" style="padding-top:0" onclick="this.style.display='none'">
-                <span class="w3-button w3-white w3-xlarge w3-display-topright">×</span> <!-- ×표시 색깔-->
-                <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-                    <img id="img01" class="w3-image">
-                    <p id="caption"></p>
-                </div>
-            </div>
-
-            <div class="w3-container w3-padding-large", id="profile">
-                <h3><b><i class="fa fa-user fa-fw w3-margin-right"></i>PROFILE</b></h3>
-                <br>
-
-                <h4>Daily<br><br>
-                    crew<br><br>
-                    I WILL DO MY BEST
-                </h4>
-                <hr>
-
-                <h3><b>TECHNICAL SKILLS</b></h3>
-                <!-- Progress bars / Skills -->
-                <p>Photography</p>
-                <div class="w3-grey">
-                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
-                </div>
-
-                <p>Web Design</p>
-                <div class="w3-grey">
-                    <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:70%">70%</div>
-                </div>
-
-                <p>
-                    <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-                        <i class="fa fa-download w3-margin-right"></i>Download Resume
-                    </button>
-                </p>
-                <hr>
-            </div>
-
-            <div class="w3-container w3-padding-large", id="portfolio">
-                <h3><b><i class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</b></h3>
-                <br>
-
-                <div class="w3-container w3-topbar w3-padding-16",id="portfolio">
-                    <button class="w3-button w3-gray">ALL</button>
-                    <button class="w3-button w3-white"><i class="fa fa-database w3-margin-right"></i>Web Programming</button>
-                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-cloud w3-margin-right"></i>Network</button>
-                    <button class="w3-button w3-white w3-hide-small"><i class="fa fa-cogs w3-margin-right"></i>Linux</button>
-                </div>
-                <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-
-                <!-- First Photo Grid-->
-                <div class="w3-container">
-                    <div class="w3-row-padding">
-                        <div class="w3-third w3-container w3-margin-bottom">
-                            <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                            <div class="w3-container w3-white">
-                                <p><b>HACKER</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                            </div>
-                        </div>
-                        <div class="w3-third w3-container w3-margin-bottom">
-                            <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                            <div class="w3-container w3-white">
-                                <p><b>DIGITAL</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                            </div>
-                        </div>
-                        <div class="w3-third w3-container">
-                            <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                            <div class="w3-container w3-white">
-                                <p><b>PROGRAMMING</b></p>
-                                <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Second Photo Grid-->
-                <div class="w3-row-padding">
-                    <div class="w3-third w3-container w3-margin-bottom">
-                        <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                        <div class="w3-container w3-white">
-                            <p><b>ANALYTICS</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                        </div>
-                    </div>
-                    <div class="w3-third w3-container w3-margin-bottom">
-                        <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                        <div class="w3-container w3-white">
-                            <p><b>AI</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                        </div>
-                    </div>
-                    <div class="w3-third w3-container w3-margin-bottom">
-                        <img th:src="@{main/images/hacker.jpeg}" alt="Norway" style="width:100%" class="w3-hover-opacity">
-                        <div class="w3-container w3-white">
-                            <p><b>BLOCKCHAIN</b></p>
-                            <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 페이지 넘김 -->
-                <div class="w3-center w3-padding-32">
-                    <div class="w3-bar">
-                        <a href="#protfolio" class="w3-bar-item w3-button">«</a>
-                        <a href="#protfolio" class="w3-bar-item w3-button">1</a>
-                        <a href="#protfolio" class="w3-bar-item w3-button">»</a>
-                    </div>
-                </div>
-
-                <!-- 바닥글 -->
-                <footer class="w3-container w3-padding-32 w3-light-gray">
-                    <div class="w3-row-padding", id="contact">
-                        <div class="w3-third">
-                            <h3><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</h3>
-                            <p>GITHUB : ROOM</p>
-                            <p>Instagram : <a href="https://www.instagram.com/?hl=ko" target="_blank" style="text-decoration:none">https://www.instagram.com/?hl=ko</a></p>
-                            <p>DAily</p>
-                        </div>
-                    </div>
-                </footer>
-                <!-- 페이지 구성 끝 -->
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 mb-5">맛집 로드뷰 및 데이터 시각화</p>
+                <a class="btn btn-primary btn-xl" href="#services">서비스 소개</a>
+<!--                <a sec:authorize="isAuthenticated()" class="btn btn-warning btn-xl" th:href="@{'/live-viewer'}">시작하기</a>-->
             </div>
         </div>
     </div>
+</header>
+<!-- Services-->
+<section class="page-section" id="services">
+    <div class="container px-4 px-lg-5">
+        <h2 class="text-center mt-0">서비스 소개</h2>
+        <hr class="divider" />
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-map fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">Cesium 지도 활용</h3>
+                    <p class="text-muted mb-0">시각화 뷰어 제공</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-box fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">panorama viewer</h3>
+                    <p class="text-muted mb-0">시각화 뷰어 제공</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-clipboard-data fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">데이터 취득 이력 관리</h3>
+                    <p class="text-muted mb-0">이력 조회 및 비교 기능</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 text-center">
+                <div class="mt-5">
+                    <div class="mb-2"><i class="bi-crop fs-1 text-primary"></i></div>
+                    <h3 class="h4 mb-2">데이터 변환 제공</h3>
+                    <p class="text-muted mb-0">obj to glb</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Portfolio-->
+<div id="portfolio">
+    <div class="container-fluid p-0">
+        <div class="row g-1">
+            <div class="col-lg-3 col-sm-6">
+                <a class="portfolio-box" th:href="@{/main/images/photo.jpg}" title="미정인 사진">
+                    <img class="img-fluid" th:src="@{/main/images/photo.jpg}" alt="..." />
+                    <div class="portfolio-box-caption">
+                        <div class="project-name">Cesium panorama create</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a class="portfolio-box" th:href="@{/main/images/photo.jpg}" title="미정인 사진">
+                    <img class="img-fluid" th:src="@{/main/images/photo.jpg}" alt="..." />
+                    <div class="portfolio-box-caption">
+                        <div class="project-name">Cesium panorama create</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a class="portfolio-box" th:href="@{/main/images/photo.jpg}" title="미정인 사진">
+                    <img class="img-fluid" th:src="@{/main/images/photo.jpg}" alt="..." />
+                    <div class="portfolio-box-caption">
+                        <div class="project-name">Cesium panorama create</div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <a class="portfolio-box" th:href="@{/main/images/photo.jpg}" title="미정인 사진">
+                    <img class="img-fluid" th:src="@{/main/images/photo.jpg}" alt="..." />
+                    <div class="portfolio-box-caption">
+                        <div class="project-name">Cesium panorama create</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-light py-5">
+    <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright &copy; 2023 - DAILY</div></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.js"></script>
+<script th:src="@{main/js/scripts.js}"></script>
 </body>
 </html>
-
-
-
-
-
-
