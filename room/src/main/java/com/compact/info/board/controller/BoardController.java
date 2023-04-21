@@ -35,8 +35,9 @@ public class BoardController {
 		return "redirect:/";
 	}
 
-	@GetMapping("/test")
-	public String tes(){
+	@GetMapping("/crolling")
+	public String tes(BoardDto boardDto){
+		boardService.write(boardDto);
 		return "board/list";
 	}
 }
