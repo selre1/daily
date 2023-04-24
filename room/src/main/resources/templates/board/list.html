@@ -48,13 +48,21 @@
       </th></tr>
       </thead>
       <tbody id="brdList" class="table-group-divider">
-        <tr>
-            <td hidden>1</td>
-            <td>1</td>
-            <td><a href="">방배</a></td>
-            <td>프프</td>
-            <td style='text-align:center;'>199</td>
-            <td>
+      <tr th:each="board : ${boardList}">
+          <td>
+              <span th:text="${board.title}"></span>
+          </td>
+          <td>
+              <span th:text="${board.content}"></span>
+          </td>
+<!--      </tr>-->
+<!--        <tr>-->
+<!--            <td hidden>1</td>-->
+<!--            <td>1</td>-->
+<!--            <td><a href="">방배</a></td>-->
+<!--            <td>프프</td>-->
+<!--            <td style='text-align:center;'>199</td>-->
+<!--            <td>-->
                 <div class='dropdown'>
                     <a class='btn dropdown-toggle btn-sm' href='#' role='button' id='dropdownMenuLink' data-bs-toggle='dropdown' aria-expanded='false'>삭제/수정</a>
                     <ul class='dropdown-menu' aria-labelledby='dropdownMenuLink'>

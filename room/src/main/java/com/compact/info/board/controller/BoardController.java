@@ -17,11 +17,16 @@ import java.util.List;
 public class BoardController {
 	private final BoardService boardService;
 
+	/**
+	 * @param model
+	 * @return
+	 */
 	@GetMapping("/list")
 	public String listPage(Model model) {
 		List<BoardDto> boardDtoList = boardService.getBoardList();
 		model.addAttribute("boardList", boardDtoList);
-		return "board/board-view";
+//		return "board/board-view";
+		return "board/list";
 	}
 
 	@GetMapping("/write")
