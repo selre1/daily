@@ -25,23 +25,18 @@ public class BoardController {
 	public String listPage(Model model) {
 		List<BoardDto> boardDtoList = boardService.getBoardList();
 		model.addAttribute("boardList", boardDtoList);
-//		return "board/board-view";
-		return "board/list";
+		return "/board/list";
 	}
 
-	@GetMapping("/write")
+	@GetMapping("/write") //등록 페이지
 	public String write(){
-		return "board/board-write";
+		return "/board/board-write";
 	}
 
-	@PostMapping("/writeBoard")
+	@PostMapping("/writeBoard") //등록
 	public String write(BoardDto boardDto){
 		boardService.write(boardDto);
-		return "redirect:/";
+		return "redirect:/board/list";
 	}
 
-	@GetMapping("/test")
-	public String tes(){
-		return "board/list";
-	}
 }
