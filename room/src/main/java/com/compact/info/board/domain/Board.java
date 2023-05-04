@@ -1,5 +1,6 @@
 package com.compact.info.board.domain;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -29,14 +30,17 @@ public class Board extends CommonDate{
 	private int hit;
 	
 	private String creatorId;
+	private LocalDateTime updateedAt;
 
 	@Builder
-	public Board(Long boardIdx, String title, String content, int hit, String creatorId) {
+	public Board(Long boardIdx, String title, String content, int hit, String creatorId, LocalDateTime updateedAt) {
 		this.boardIdx = boardIdx;
 		this.title = title;
 		this.content = content;
 		this.hit = hit;
 		this.creatorId = creatorId;
+		this.updateedAt = updateedAt;
+
 	}
 
 	@OneToMany(mappedBy = "board")

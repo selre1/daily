@@ -2,6 +2,7 @@ package com.compact.info.board.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 import com.compact.info.board.dto.BoardDto;
@@ -35,4 +36,10 @@ public class BoardService {
     public Long write(BoardDto boardDto) {
         return boardRepository.save(boardDto.toEntity()).getBoardIdx();
     }
+
+//    public BoardDto findById(final long boardIdx){
+//        Optional<Board> entity  = boardRepository.findById(boardIdx);
+////        entity.increaseHits(); //조회수 증가
+//        return new Board(entity);
+//    }
 }
